@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/main.png">
+    <title>EXIF Metadata and Email Checker</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #222;
+            color: #fff;
+        }
+        h1, h2 {
+            color: #fff;
+        }
+        input, button {
+            padding: 10px;
+            margin: 10px;
+            border-radius: 5px;
+            border: none;
+        }
+        #uploadButton, #emailButton {
+            background-color: #28a745;
+            color: white;
+        }
+        #copyButton, #downloadButton {
+            background-color: #007bff;
+            color: white;
+        }
+        #resultContainer {
+            margin-top: 20px;
+            position: relative;
+        }
+        pre {
+            background-color: #000;
+            color: white;
+            padding: 20px;
+            border-radius: 5px;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        .json-key {
+            color: #2ecc71;
+        }
+        .json-value {
+            color: #fff;
+        }
+        .json-brackets {
+            color: #e74c3c;
+        }
+        .action-buttons {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+        .action-buttons button {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Upload an Image to View EXIF Metadata</h1>
+    
+    <!-- File input for selecting an image -->
+    <input type="file" id="fileInput">
+    <button id="uploadButton">Upload and Get EXIF Data</button>
+    
+    <!-- New Section for Email Checker -->
+    <h2>Check Email Reputation</h2>
+    <input type="email" id="emailInput" placeholder="Enter email to check">
+    <button id="emailButton">Check Email</button>
+    
+    <!-- Container to display the results -->
+    <div id="resultContainer"></div>
+    
+    <script src="data.js"></script>
+</body>
+</html>
